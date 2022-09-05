@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" android:layout_height="match_parent" android:layout_width="match_parent">
+
+    <!-- Color de fondo de la vista -->
+    <solid
+        android:color="@color/celeste" >
+    </solid>
+
+    <!-- Color y ancho del borde del elemento -->
+    <stroke
+        android:width="3dp"
+        android:color="@color/celeste_fuerte" >
+    </stroke>
+
+    <!-- Si queremos añadir algún padding -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp"    >
+    </padding>
+
+    <!-- Aquí indicamos el radio a aplicar a las esquinas -->
+    <corners
+        android:radius="34dp"   >
+    </corners>
+
+</shape>

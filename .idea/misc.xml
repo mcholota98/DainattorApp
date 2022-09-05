@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_custodiado.xml" value="0.22" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_edit_custodiado.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_portal_libros.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_tutor.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_emotion.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_emotion_r.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_people_to_monitor.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_see_detect.xml" value="0.33" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_tutor.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/people_to_monitor.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/see_detect.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

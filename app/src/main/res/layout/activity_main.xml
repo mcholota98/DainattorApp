@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login">
+
+
+    <ImageView
+        android:id="@+id/robots_copi"
+        android:layout_width="407dp"
+        android:layout_height="272dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
+        app:srcCompat="@drawable/imagenp" />
+
+    <TextView
+        android:id="@+id/login2"
+        android:layout_width="214dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="307dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/login"
+        android:textAppearance="@style/login"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/txt_usuario"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="351dp"
+        android:drawableStart="@drawable/candado8"
+        android:hint="@string/txt_usuario"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/txt_usuario" />
+
+    <EditText
+        android:id="@+id/txt_Url"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="467dp"
+        android:drawableStart="@drawable/www"
+        android:hint="Link"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/txt_contras" />
+
+    <EditText
+        android:id="@+id/txt_contras"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="409dp"
+        android:drawableStart="@drawable/user8"
+        android:hint="@string/txt_contras"
+        android:inputType="textPassword"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/txt_contras" />
+
+    <View
+        android:id="@+id/login1"
+        android:layout_width="304dp"
+        android:layout_height="286dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="304dp"
+        android:background="#00000000" />
+
+    <Button
+        android:id="@+id/crear_cuent"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="628dp"
+        android:backgroundTint="@android:color/white"
+        android:gravity="center_horizontal|top"
+        android:onClick="NewCreate"
+        android:text="@string/crear_cuent"
+        android:textAlignment="center"
+        android:textAppearance="@style/crear_cuent"
+        android:textColor="@color/azul"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="146dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="543dp"
+        android:background="@drawable/btningresar"
+        android:drawableLeft="@drawable/ic_ingresar"
+        android:onClick="login"
+        android:text="@string/enter"
+        android:textAlignment="center"
+        android:textAppearance="@style/enter" />
+
+</RelativeLayout>

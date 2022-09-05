@@ -1,0 +1,164 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/aggcustodiado"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/tutorprofil">
+
+        <EditText
+            android:id="@+id/txtCalendar_edit"
+            android:layout_width="345dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="383dp"
+            android:focusable="false"
+            android:background="@drawable/rectangle_6"
+            android:hint="Select your date of birth" />
+
+        <EditText
+            android:id="@+id/txtcedula_edit"
+            android:layout_width="345dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="307dp"
+            android:background="@drawable/rectangle_6"
+            android:hint="Write your number identitatem card"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <TextView
+            android:id="@+id/people_to_m"
+            android:layout_width="256dp"
+            android:layout_height="19dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal|top"
+            android:text="Update custodian details"
+            android:textAppearance="@style/people_to_m" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagenUser_edit"
+            android:layout_width="91dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/usergran" />
+
+        <Button
+            android:id="@+id/btnCamara_edit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="215dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="99dp"
+            android:background="@drawable/ellipse_3"
+            android:drawableLeft="@drawable/cam_negra"
+            android:onClick="aggFotos"
+            android:text="x" />
+
+        <EditText
+            android:id="@+id/txtnombres_edit"
+            android:layout_width="345dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="156dp"
+            android:background="@drawable/rectangle_6"
+            android:hint="Write your first names" />
+
+        <TextView
+            android:id="@+id/last_names"
+            android:layout_width="79dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="213dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/last_names"
+            android:textAppearance="@style/last_names" />
+
+        <EditText
+            android:id="@+id/txtapellidos_edit"
+            android:layout_width="345dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="232dp"
+            android:background="@drawable/rectangle_6"
+            android:hint="Write your last names" />
+
+        <TextView
+            android:id="@+id/identitatem"
+            android:layout_width="110dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="288dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/identitatem"
+            android:textAppearance="@style/identitatem" />
+
+        <TextView
+            android:id="@+id/first_names"
+            android:layout_width="79dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="137dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/first_names"
+            android:textAppearance="@style/first_names" />
+
+        <TextView
+            android:id="@+id/date_of_bir"
+            android:layout_width="86dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="364dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/date_of_bir"
+            android:textAppearance="@style/date_of_bir" />
+
+        <Button
+            android:id="@+id/guardar_edit"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="500dp"
+            android:backgroundTint="@color/verde"
+            android:onClick="EditCustodiado"
+            android:text="UPDATE"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+</ScrollView>
