@@ -14,7 +14,6 @@
     android:background="@drawable/tutorprofil">
 
 
-
     <EditText
         android:id="@+id/txtcedula"
         android:layout_width="345dp"
@@ -25,6 +24,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginTop="283dp"
         android:background="@drawable/rectangle_6"
+        android:inputType="textPassword"
         android:hint="x" />
 
     <EditText
@@ -62,7 +62,7 @@
         android:layout_marginTop="28dp"
         android:src="@drawable/usergran" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCamar"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -73,10 +73,9 @@
         android:layout_marginStart="214dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="75dp"
-        android:background="@drawable/ellipse_3"
-        android:drawableLeft="@drawable/cam_negra"
-        android:onClick="cargarImg"
-        android:text="x" />
+        android:background="@drawable/ellipse_33"
+        android:src="@drawable/cam_negra"
+        android:onClick="cargarImg" />
 
     <EditText
         android:id="@+id/txtnombre"

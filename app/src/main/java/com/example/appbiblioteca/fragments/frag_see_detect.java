@@ -1,6 +1,8 @@
 package com.example.appbiblioteca.fragments;
 
 import com.example.appbiblioteca.MainActivity;
+import com.example.appbiblioteca.Modelos.HiloWebService;
+import com.example.appbiblioteca.Modelos.IConfiguSistema;
 import com.example.appbiblioteca.Modelos.see_detect;
 import com.example.appbiblioteca.R;
 import com.example.appbiblioteca.WebServices.Asynchtask;
@@ -25,7 +27,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class frag_see_detect extends Fragment implements Asynchtask {
+public class frag_see_detect extends Fragment implements IConfiguSistema {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,6 +46,7 @@ public class frag_see_detect extends Fragment implements Asynchtask {
     PlaceHolderView phv_detect;
     String url1;
     String str;
+    int paraSaber=0;
 
     public frag_see_detect() {
         // Required empty public constructor
@@ -89,10 +92,14 @@ public class frag_see_detect extends Fragment implements Asynchtask {
         variable=1;
         url1 = MainActivity.Burl.getString("key1");
         str = MainActivity.mMyAppsBundle.getString("key");
-        link_api = url1+"monitoreo/historial/?cuidador_id="+str;
-        ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, this);
-        servicioTask.execute();
         showDialog();
+        HiloWebService peticion1 = new HiloWebService("Historial", getContext(), "GET", url1+"monitoreo/historial/?cuidador_id="+str, this);
+        HiloWebService peticion2 = new HiloWebService("EstadoSistema", getContext(), "GET", url1 + "monitoreo/vigilancia/", this);
+        Thread hilo1 = new Thread(peticion1);
+        Thread hilo2 = new Thread(peticion2);
+        hilo1.start();
+        hilo2.start();
+        progDailog.dismiss();
         swSistema.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) //Line A
@@ -103,9 +110,7 @@ public class frag_see_detect extends Fragment implements Asynchtask {
                     try {
                         JSONObject json_mensaje = new JSONObject();
                         json_mensaje.put("vigilancia", true);
-                        ServicioTask servicioTask = new ServicioTask(getContext(), "PUT", url1 + "monitoreo/vigilancia/", json_mensaje.toString(), frag_see_detect.this::processFinish);
-                        servicioTask.execute();
-                        showDialog();
+                        swVigilancia(url1 + "monitoreo/vigilancia/",json_mensaje);
                     }catch (Exception ex)
                     {
                         Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
@@ -114,9 +119,7 @@ public class frag_see_detect extends Fragment implements Asynchtask {
                     try {
                         JSONObject json_mensaje = new JSONObject();
                         json_mensaje.put("vigilancia", false);
-                        ServicioTask servicioTask = new ServicioTask(getContext(), "PUT", url1 + "monitoreo/vigilancia/", json_mensaje.toString(), frag_see_detect.this::processFinish);
-                        servicioTask.execute();
-                        showDialog();
+                        swVigilancia(url1 + "monitoreo/vigilancia/",json_mensaje);
                     }catch (Exception ex)
                     {
                         Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
@@ -132,14 +135,12 @@ public class frag_see_detect extends Fragment implements Asynchtask {
                 try {
                     int nro1 = Integer.parseInt(cadenaS.getText().toString());
                     link_api = url1+"monitoreo/historial/?persona__cedula="+cadenaS.getText()+"&cuidador_id="+str;
-                    ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, frag_see_detect.this::processFinish);
-                    servicioTask.execute();
+                    mtBuscar(link_api);
                     showDialog();
                 }catch (Exception e)
                 {
                     link_api = url1+"monitoreo/historial/?nombres_apellidos="+cadenaS.getText()+"&cuidador_id="+str;
-                    ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, frag_see_detect.this::processFinish);
-                    servicioTask.execute();
+                    mtBuscar(link_api);
                     showDialog();
                 }
             }
@@ -147,6 +148,19 @@ public class frag_see_detect extends Fragment implements Asynchtask {
         return rootView;
     }
 
+    public void swVigilancia(String cadena, JSONObject jsonObject)
+    {
+        HiloWebService peticion2 = new HiloWebService("EstadoSistema", getContext(),"PUT", jsonObject.toString(), cadena, this);
+        Thread hilo2 = new Thread(peticion2);
+        hilo2.start();
+    }
+
+    public void mtBuscar(String cadena)
+    {
+        HiloWebService peticion1 = new HiloWebService("Historial", getContext(), "GET", cadena, this);
+        Thread hilo1 = new Thread(peticion1);
+        hilo1.start();
+    }
     private void showDialog(){
         progDailog = new ProgressDialog(getContext());
         progDailog.setTitle("Query data");
@@ -156,35 +170,36 @@ public class frag_see_detect extends Fragment implements Asynchtask {
         progDailog.setCancelable(true);
         progDailog.show();
     }
-
+    @Override
+    public void getHistorial(String result) throws JSONException {
+        try {
+            this.phv_detect.removeAllViews();
+            progDailog.dismiss();
+            JSONObject json_data = new JSONObject(result);
+            JSONArray json_historial = json_data.getJSONArray("historial");
+            for (int i = 0; i < json_historial.length(); i++) {
+                JSONObject un_historial = json_historial.getJSONObject(i);
+                this.phv_detect.addView(new see_detect(getContext(), un_historial));
+            }
+        } catch (Exception ex) {
+            Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
 
     @Override
-    public void processFinish(String result) throws JSONException {
-        if(variable==1) {
-            try {
-                this.phv_detect.removeAllViews();
-                progDailog.dismiss();
-                JSONObject json_data = new JSONObject(result);
-                JSONArray json_historial = json_data.getJSONArray("historial");
-                for (int i = 0; i < json_historial.length(); i++) {
-                    JSONObject un_historial = json_historial.getJSONObject(i);
-                    this.phv_detect.addView(new see_detect(getContext(), un_historial));
-                }
-            } catch (Exception ex) {
-                Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+    public void getEstadoSistem(String result) throws JSONException {
+        try {
+            progDailog.dismiss();
+            JSONObject json_data = new JSONObject(result);
+            if (json_data.getString("vigilancia").equals("true")) {
+                Toast.makeText(getContext(), "Camera on", Toast.LENGTH_LONG).show();
+                swSistema.setChecked(true);
+            } else {
+                Toast.makeText(getContext(), "Camera off", Toast.LENGTH_LONG).show();
+                swSistema.setChecked(false);
             }
-        }else {
-            try {
-                progDailog.dismiss();
-                JSONObject json_data = new JSONObject(result);
-                if (json_data.getString("vigilancia").equals("true")) {
-                    Toast.makeText(getContext(), "Camera on", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getContext(), "Camera off", Toast.LENGTH_LONG).show();
-                }
-            } catch (Exception ex) {
-                Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
-            }
+        } catch (Exception ex) {
+            Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 }

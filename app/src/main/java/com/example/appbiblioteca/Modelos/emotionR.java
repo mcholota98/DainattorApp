@@ -66,8 +66,8 @@ public class emotionR {
             triste=unaEvidencia.getInt("triste");
             sorprendido=unaEvidencia.getInt("sorprendido");
             nombre.setText(unaEvidencia.getString("custodiado__persona__nombres")+" - "+unaEvidencia.getString("fecha_inicio_fin"));
-            estados.setText("1.Enfadado, 2.Asqueado, 3.Temeroso, 4.Feliz, 5.Neutral, 6.Triste, 7.Sorprendido");
-            porcentaje.setText("Prediction percentage "+unaEvidencia.getString("prediccion_trastorno")+"%");
+            estados.setText("1.Angry, 2.Disgusted, 3.Afraid, 4.Happy, 5.Neutral, 6.Sad, 7.Surprised");
+            porcentaje.setText("Prediction: "+unaEvidencia.getString("prediccion_trastorno"));
             BarGraphSeries<DataPoint> series=new BarGraphSeries<>(new DataPoint[]{
                     new DataPoint(1,enfadado),
                     new DataPoint(2,asqueado),

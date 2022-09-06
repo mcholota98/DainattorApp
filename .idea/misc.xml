@@ -3,16 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_custodiado.xml" value="0.22" />
-        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_edit_custodiado.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/drawable/ellipse_3.xml" value="0.1415" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/drawable/ellipse_33.xml" value="0.1415" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_custodiado.xml" value="0.25" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_edit_custodiado.xml" value="0.22" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_menu.xml" value="0.22" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_portal_libros.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/activity_tutor.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/emotion_r.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_emotion.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_emotion_r.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_people_to_monitor.xml" value="0.25" />
-        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_see_detect.xml" value="0.33" />
+        <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_see_detect.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/fragment_tutor.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/people_to_monitor.xml" value="0.25" />
         <entry key="..\:/Users/Miguel/Music/AppBiblioteca-master/AppBiblioteca-master/app/src/main/res/layout/see_detect.xml" value="0.20416666666666666" />

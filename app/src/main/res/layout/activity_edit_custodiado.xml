@@ -35,21 +35,22 @@
             android:layout_marginTop="307dp"
             android:background="@drawable/rectangle_6"
             android:hint="Write your number identitatem card"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:maxLength="10" />
 
         <TextView
             android:id="@+id/people_to_m"
             android:layout_width="256dp"
-            android:layout_height="19dp"
+            android:layout_height="26dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:gravity="center_horizontal|top"
             android:text="Update custodian details"
-            android:textAppearance="@style/people_to_m" />
+            android:textAppearance="@style/people_to_m"
+            android:textStyle="bold" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imagenUser_edit"
@@ -59,7 +60,7 @@
             android:layout_marginTop="50dp"
             android:src="@drawable/usergran" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btnCamara_edit"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -70,10 +71,9 @@
             android:layout_marginStart="215dp"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="99dp"
-            android:background="@drawable/ellipse_3"
-            android:drawableLeft="@drawable/cam_negra"
-            android:onClick="aggFotos"
-            android:text="x" />
+            android:background="@drawable/ellipse_33"
+            android:src="@drawable/cam_negra"
+            android:onClick="aggFotos"/>
 
         <EditText
             android:id="@+id/txtnombres_edit"

@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -91,7 +92,7 @@ public class frag_tutor extends Fragment implements Asynchtask {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_tutor, container, false);
         imagen=(ImageView) rootView.findViewById(R.id.imagenUse);
-        Button btnImagen = (Button) rootView.findViewById(R.id.btnCamar);
+        ImageButton btnImagen = (ImageButton) rootView.findViewById(R.id.btnCamar);
         nomUsuario=(TextView)rootView.findViewById(R.id.txtuserT);
         pnombre=(TextView)rootView.findViewById(R.id.txtnombre);
         papellidos=(TextView)rootView.findViewById(R.id.txtapellido);

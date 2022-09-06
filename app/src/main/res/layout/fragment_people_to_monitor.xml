@@ -63,7 +63,7 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/body_sistema"
-        android:layout_width="391dp"
+        android:layout_width="371dp"
         android:layout_height="540dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"

@@ -29,11 +29,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.nio.ByteBuffer;
+
 
 @NonReusable
 @Layout(R.layout.people_to_monitor)
 public class people_to_monitor implements Asynchtask {
     private String link_api;
+    ImageView imagen1;
     private ProgressDialog progDailog;
     String url1;
     public static Bundle mMyAppsBundle1 = new Bundle();

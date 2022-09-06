@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements Asynchtask {
         this.txtUsuario = (TextView) findViewById(R.id.txt_usuario);
         this.txtClave = (TextView) findViewById(R.id.txt_contras);
         this.UrlGeneral=(TextView) findViewById(R.id.txt_Url);
-        UrlGeneral.setText("https://webservicestrastorno.herokuapp.com/");
+
     }
     public void login(View view) {
         try {
